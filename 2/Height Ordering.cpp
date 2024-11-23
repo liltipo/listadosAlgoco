@@ -9,7 +9,6 @@ int main() {
     for (int dataset = 0; dataset < numDatasets; dataset++) {
         int datasetNumber, steps = 0, behind;
         vector<int> heights, orderedHeights;
-
         // Lee las 21 entradas, pero ignora la primera que es el número del dataset
         cin >> datasetNumber;
         for (int i = 0; i < 20; i++) {
@@ -17,7 +16,6 @@ int main() {
             cin >> height;
             heights.push_back(height);
         }
-
         // Ordena las alturas
         for (int i = 0; i < 20; i++) {
             bool inserted = false;
@@ -26,7 +24,6 @@ int main() {
                 orderedHeights.push_back(heights[i]);
                 continue;
             }
-
             // Busca la posición donde insertar
             for (int j = 0; j < orderedHeights.size(); j++) {
                 if (orderedHeights[j] > heights[i]) {
@@ -37,16 +34,13 @@ int main() {
                     break;
                 }
             }
-
             // Si no se insertó, añadir al final
             if (!inserted) {
                 orderedHeights.push_back(heights[i]);
             }
         }
-
         // Imprimir el resultado para el conjunto de datos actual
         cout << datasetNumber << " " << steps << endl;
     }
-
     return 0;
 }

@@ -2,7 +2,6 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-
 using namespace std;
 
 // Función para generar primos hasta un máximo límite

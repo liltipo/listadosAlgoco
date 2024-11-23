@@ -3,7 +3,6 @@
 #include <algorithm>
 using namespace std;
 
-
 // Compara las primeras dos letras de los apellidos
 bool compare(const string& a, const string& b) {
     string a2 = a.substr(0, 2);
@@ -11,7 +10,6 @@ bool compare(const string& a, const string& b) {
 
     return a2 < b2;
 }
-
 
 int main() {
     while (true) {
